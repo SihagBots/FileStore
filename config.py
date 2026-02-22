@@ -14,7 +14,7 @@ SHORT_API = "b4c55b5464676e8a7bbf9e8903b00a289debbec3"
 SHORT_TUT = "https://t.me/HowToDownloadSnap/2"
 
 # Bot Configuration
-SESSION = "FilesToLinkZBot"
+SESSION = "SnapXPagluBot"
 TOKEN = os.environ.get("TOKEN", "")
 API_ID = os.environ.get("API_ID", "")
 API_HASH = os.environ.get("API_HASH", "")
