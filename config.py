@@ -13,13 +13,13 @@ SHORT_API = ""
 SHORT_TUT = "https://t.me/How_to_Download_7x/26"
 
 # Bot Configuration
-SESSION = "yato"
+SESSION = "FilesToLinkZBot"
 TOKEN = ""
 API_ID = ""
 API_HASH = ""
 WORKERS = 5
 
-DB_URI = "mongodb"
+DB_URI = ""
 DB_NAME = "yato"
 
 FSUBS = [[-1003759386278, True, 10]] # Force Subscription Channels [channel_id, request_enabled, timer_in_minutes]
