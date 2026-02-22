@@ -14,12 +14,12 @@ SHORT_TUT = "https://t.me/How_to_Download_7x/26"
 
 # Bot Configuration
 SESSION = "FilesToLinkZBot"
-TOKEN = ""
-API_ID = ""
-API_HASH = ""
+TOKEN = os.environ.get("TOKEN", "")
+API_ID = os.environ.get("API_ID", "")
+API_HASH = os.environ.get("API_HASH", "")
 WORKERS = 5
 
-DB_URI = ""
+DB_URI = os.environ.get("DB_URI", "")
 DB_NAME = "yato"
 
 FSUBS = [[-1003759386278, True, 10]] # Force Subscription Channels [channel_id, request_enabled, timer_in_minutes]
