@@ -6,9 +6,10 @@ routes = web.RouteTableDef()
 
 @routes.get("/", allow_head=True)
 async def root_route_handler(request):
-    readme_path = os.path.join(os.path.dirname(__file__), "README.md")
+    project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    readme_path = os.path.join(project_root, "README.md")
     if not os.path.exists(readme_path):
-        return web.Response(text="README.md not found", status=404)
+        return web.Response(text="Bot is running", status=200)
 
     with open(readme_path, "r", encoding="utf-8") as f:
         md_text = f.read()
@@ -65,6 +66,11 @@ async def root_route_handler(request):
     </html>
     """
     return web.Response(text=html_page, content_type="text/html")
+
+
+@routes.get("/health", allow_head=True)
+async def health_route_handler(request):
+    return web.Response(text="ok", status=200)
 
 
 app = web.Application()
