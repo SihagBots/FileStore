@@ -9,9 +9,13 @@ OWNER_ID = 6891095964
 
 MSG_EFFECT = 5046509860389126442
 
-SHORT_URL = "vplink.in" # shortner url 
-SHORT_API = "b4c55b5464676e8a7bbf9e8903b00a289debbec3" 
+SHORT_URL = "arolinks.com" # shortner url 
+SHORT_API = "2bd6b41b022d08c3d13cbe229497092a5c30cc7e" 
 SHORT_TUT = "https://t.me/HowToDownloadSnap/2"
+VERIFY_COOLDOWN = int(os.environ.get("VERIFY_COOLDOWN", "180"))
+VERIFY_REDIRECT_DELAY = int(os.environ.get("VERIFY_REDIRECT_DELAY", "5"))
+VERIFY_LOG_CHANNEL = int(os.environ.get("VERIFY_LOG_CHANNEL", "0"))
+SERVICE_URL = os.environ.get("SERVICE_URL", "")
 
 # Bot Configuration
 SESSION = "SnapXPagluBot"
@@ -45,11 +49,18 @@ MESSAGES = {
     "FSUB": "<b><blockquote>›› ʜᴇʏ ×</blockquote>\n  ʏᴏᴜʀ ғɪʟᴇ ɪs ʀᴇᴀᴅʏ ‼️ ʟᴏᴏᴋs ʟɪᴋᴇ ʏᴏᴜ ʜᴀᴠᴇɴ'ᴛ sᴜʙsᴄʀɪʙᴇᴅ ᴛᴏ ᴏᴜʀ ᴄʜᴀɴɴᴇʟs ʏᴇᴛ, sᴜʙsᴄʀɪʙᴇ ɴᴏᴡ ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ғɪʟᴇs</b>",
     "ABOUT": "<b>›› ғᴏʀ ᴍᴏʀᴇ: @TuneBots \n <blockquote expandable>›› ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ: <a href='https://t.me/Snap_Lover8'>Cʟɪᴄᴋ ʜᴇʀᴇ</a> \n›› Nᴇᴡs Rᴏᴏᴍ: <a href='https://t.me/+NbpXnldC3AI2NTU1'>Cʟɪᴄᴋ ʜᴇʀᴇ</a> \n›› sɴᴀᴘ ʟᴏᴠᴇʀ: <a href='https://t.me/+5000jEnshVVmYzg1'>Cʟɪᴄᴋ ʜᴇʀᴇ</a> \n›› Dɪsᴋᴡᴀʟᴀ: <a href='https://t.me/+GHL_Gg64eBZlMTVl'>Cʟɪᴄᴋ ʜᴇʀᴇ</a> \n›› Tᴇʀᴀʙᴏx: <a href='https://t.me/+VoZbnEAO9CxhZWE1'>Cʟɪᴄᴋ ʜᴇʀᴇ</a> \n›› ᴅᴇᴠᴇʟᴏᴘᴇʀ: @SnapLoverXBot</b></blockquote>",
     "REPLY": "<b>For More Join - @Snap_Lover8</b>",
-    "SHORT_MSG": "<b>📊 ʜᴇʏ {first}, \n\n‼️ ɢᴇᴛ ᴀʟʟ ꜰɪʟᴇꜱ ɪɴ ᴀ ꜱɪɴɢʟᴇ ʟɪɴᴋ ‼️\n\n ⌯ ʏᴏᴜʀ ʟɪɴᴋ ɪꜱ ʀᴇᴀᴅʏ, ᴋɪɴᴅʟʏ ᴄʟɪᴄᴋ ᴏɴ ᴏᴘᴇɴ ʟɪɴᴋ ʙᴜᴛᴛᴏɴ..</b>",
-    "START_PHOTO": "https://graph.org/file/510affa3d4b6c911c12e3.jpg",
-    "FSUB_PHOTO": "https://telegra.ph/file/7a16ef7abae23bd238c82-b8fbdcb05422d71974.jpg",
-    "SHORT_PIC": "https://telegra.ph/file/7a16ef7abae23bd238c82-b8fbdcb05422d71974.jpg",
-    "SHORT": "https://telegra.ph/file/8aaf4df8c138c6685dcee-05d3b183d4978ec347.jpg"
+    "SHORT_MSG": "<b>📊 ʜᴇʏ bro, \n\n‼️ ɢᴇᴛ ᴀʟʟ ꜰɪʟᴇꜱ ɪɴ ᴀ ꜱɪɴɢʟᴇ ʟɪɴᴋ ‼️\n\n ⌯ ʏᴏᴜʀ ʟɪɴᴋ ɪꜱ ʀᴇᴀᴅʏ, ᴋɪɴᴅʟʏ ᴄʟɪᴄᴋ ᴏɴ ᴏᴘᴇɴ ʟɪɴᴋ ʙᴜᴛᴛᴏɴ..</b>",
+    "START_PHOTO": "https://i.ibb.co/YBtKqn2H/photo-2026-03-05-12-16-54-7613744424618557456.jpg",
+    "FSUB_PHOTO": "https://i.ibb.co/mVgCc1Ck/photo-2026-03-05-12-16-43-7613744373078949904.jpg",
+    "SHORT_PIC": "https://i.ibb.co/VWLXFYjG/photo-2026-03-05-12-12-09-7613743200552878096.jpg",
+    "VERIFY_WARN_PHOTO": "https://i.ibb.co/JwPmt4vf/photo-2026-03-05-12-18-13-7613744759626006548.jpg",
+    "VERIFY_WARN_MSG": "<b>🎉 Cᴏɴɢʀᴀᴛᴜʟᴀᴛɪᴏɴs Yᴏᴜ Fᴜᴄᴋᴇᴅ Uᴘ.\n\n Bʏᴘᴀss ᴅᴇᴛᴇᴄᴛᴇᴅ. Tʜɪs ɪs ʏᴏᴜʀ {attempt} ᴀᴛᴛᴇᴍᴘᴛ, ʏᴏᴜ ᴡɪʟʟ ʙᴇ ʙᴀɴ ᴏɴ ᴛʜᴇ ɴᴇxᴛ ᴀᴛᴛᴇᴍᴘᴛ.\n\n Usᴇ Yᴏᴜʀ Nᴇᴡ Lɪɴᴋ Tᴏ Gᴇᴛ Fɪʟᴇs.</b>",
+    "CHANNEL_LINK_PHOTO": "https://i.ibb.co/G4K04d7y/photo-2026-03-05-12-11-41-7613743080293793808.jpg",
+    "CHANNEL_LINK_MSG": "<b>📢 Channel access link ready for <i>{channel_name}</i>.\n⏳ This join-request link will expire in {expire_minutes} minutes.\n👇 Tap button below to join.</b>",
+    "REFER_PHOTO": "https://i.ibb.co/Jww1k4v9/photo-2026-03-06-12-59-37-7614126517794111492.jpg",
+    "REFER_MSG": "<b>🎁 Refer & Earn Program!\nInvite your friends and after successful join, both of you get 1 day premium.</b>\n\n🔗 {invite_link}",
+    "DEFAULT_PROFILE_PIC": "https://i.ibb.co/SDMHjm76/photo-2026-03-06-12-48-22-7614123618691186708.jpg",
+    "SHORT": "https://i.ibb.co/RGsH1m4T/photo-2026-03-05-12-10-50-7613742856955494416.jpg"
 }
 
 def LOGGER(name: str, client_name: str) -> logging.Logger:
