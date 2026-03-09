@@ -24,7 +24,7 @@ __Use the appropriate button below to add or remove an admin based on your needs
 
 #===============================================================#
 
-@Client.on_message(filters.command("stats"))
+@Client.on_message(filters.command(["stats", "usage"]))
 async def usage_cmd(client: Client, message: Message):
     if not message.from_user.id in client.admins:
         return await message.reply("✗ ᴛʜɪs ᴄᴀɴ ᴏɴʟʏ ʙᴇ ᴜsᴇᴅ ʙʏ ᴀᴅᴍɪɴs!")
@@ -175,4 +175,3 @@ async def remove_admins(client: Client, query: CallbackQuery):
     await admins(client, query)
     return await ids_msg.reply(f"__{len(ids)} admin {'id' if len(ids)==1 else 'ids'} have been removed!!__")
     
-
