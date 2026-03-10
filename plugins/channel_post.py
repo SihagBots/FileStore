@@ -62,3 +62,7 @@ async def new_post(client: Client, message: Message):
         print(e)
 
         pass
+
+
+
+
