@@ -238,10 +238,11 @@ class MongoDB:
 
     # ✅ VERIFY LINK FUNCTIONS
 
-    async def create_verify_link(self, token: str, user_id: int, payload: str, short_link: str, expires_at: datetime):
+    async def create_verify_link(self, token: str, service_token: str, user_id: int, payload: str, short_link: str, expires_at: datetime):
         await self.verify_links.update_one(
             {"_id": token},
             {"$set": {
+                "service_token": service_token,
                 "user_id": user_id,
                 "payload": payload,
                 "short_link": short_link,
@@ -254,6 +255,9 @@ class MongoDB:
 
     async def get_verify_link(self, token: str) -> dict:
         return await self.verify_links.find_one({"_id": token})
+
+    async def get_verify_link_by_service_token(self, service_token: str) -> dict:
+        return await self.verify_links.find_one({"service_token": service_token})
 
     async def mark_verify_link_used(self, token: str):
         await self.verify_links.update_one({"_id": token}, {"$set": {"used": True, "used_at": datetime.now()}})
@@ -280,6 +284,24 @@ class MongoDB:
     async def get_early_verify_violation(self, user_id: int) -> int:
         data = await self.verify_users.find_one({"_id": user_id})
         return data.get("early_verify_count", 0) if data else 0
+
+    async def set_verify_access_until(self, user_id: int, access_until: datetime):
+        await self.verify_users.update_one(
+            {"_id": user_id},
+            {"$set": {"access_until": access_until, "updated_at": datetime.now()}},
+            upsert=True
+        )
+
+    async def get_verify_access_until(self, user_id: int):
+        data = await self.verify_users.find_one({"_id": user_id})
+        return data.get("access_until") if data else None
+
+    async def reset_verify_access_until(self, user_id: int):
+        await self.verify_users.update_one(
+            {"_id": user_id},
+            {"$unset": {"access_until": ""}, "$set": {"updated_at": datetime.now()}},
+            upsert=True
+        )
 
     # ✅ FSUB STATUS COLLECTION FUNCTIONS
 
