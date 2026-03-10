@@ -11,10 +11,14 @@ MSG_EFFECT = 5046509860389126442
 
 SHORT_URL = "arolinks.com" # shortner url 
 SHORT_API = "2bd6b41b022d08c3d13cbe229497092a5c30cc7e" 
+SHORT_URL_2 = os.environ.get("SHORT_URL_2", "vplink.in")
+SHORT_API_2 = os.environ.get("SHORT_API_2", "b4c55b5464676e8a7bbf9e8903b00a289debbec3")
 SHORT_TUT = "https://t.me/HowToDownloadSnap/2"
 VERIFY_COOLDOWN = int(os.environ.get("VERIFY_COOLDOWN", "180"))
 VERIFY_REDIRECT_DELAY = int(os.environ.get("VERIFY_REDIRECT_DELAY", "5"))
 VERIFY_LOG_CHANNEL = int(os.environ.get("VERIFY_LOG_CHANNEL", "0"))
+VERIFY_ACCESS_TIME_ENABLED = os.environ.get("VERIFY_ACCESS_TIME_ENABLED", "False").lower() == "true"
+VERIFY_ACCESS_HOURS = int(os.environ.get("VERIFY_ACCESS_HOURS", "1"))
 SERVICE_URL = os.environ.get("SERVICE_URL", "https://exciting-rodent-sihagbots-e5b9a9ef.koyeb.app")
 
 # Bot Configuration
@@ -29,7 +33,7 @@ DB_NAME = "yato"
 
 FSUBS = [[-1003759386278, True, 10]] # Force Subscription Channels [channel_id, request_enabled, timer_in_minutes]
 # Database Channel (Primary)
-DB_CHANNEL = -1003542287615   # just put channel id dont add ""
+DB_CHANNEL = -1003591916255   # just put channel id dont add ""
 # Multiple Database Channels (can be set via bot settings)
 # DB_CHANNELS = {
 #     "-1002595092736": {"name": "Primary DB", "is_primary": True, "is_active": True},
