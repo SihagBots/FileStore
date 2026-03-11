@@ -14,7 +14,7 @@ from datetime import datetime, timedelta
 
 def build_verify_path(client: Client, verify_token: str, service_token: str) -> str:
     base = getattr(client, 'service_url', '').rstrip('/')
-    return f"{base}/verify/{service_token}" if base else f"https://t.me/{client.username}?start=verify_{verify_token}"
+    return f"{base}/verify/{service_token}" if base else ""
 
 
 async def issue_verify_link(client: Client, message: Message, payload: str):
@@ -41,7 +41,9 @@ async def issue_verify_link(client: Client, message: Message, payload: str):
     short_caption = client.messages.get("SHORT_MSG", "")
     tutorial_link = getattr(client, 'tutorial_link', "https://t.me/HowToDownloadSnap/2")
     service_link = build_verify_path(client, verify_token, service_token)
-    service_short_link = get_short(service_link, client)
+    if not service_link:
+        client.LOGGER(__name__, client.name).warning("Service URL is not configured. Cannot generate service verify link.")
+        return await message.reply("⚠️ Service verify link is not configured. Please contact admin.")
 
     await client.send_photo(
         chat_id=message.chat.id,
