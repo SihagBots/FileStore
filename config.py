@@ -53,7 +53,7 @@ MESSAGES = {
     "FSUB": "<b><blockquote>›› ʜᴇʏ ×</blockquote>\n  ʏᴏᴜʀ ғɪʟᴇ ɪs ʀᴇᴀᴅʏ ‼️ ʟᴏᴏᴋs ʟɪᴋᴇ ʏᴏᴜ ʜᴀᴠᴇɴ'ᴛ sᴜʙsᴄʀɪʙᴇᴅ ᴛᴏ ᴏᴜʀ ᴄʜᴀɴɴᴇʟs ʏᴇᴛ, sᴜʙsᴄʀɪʙᴇ ɴᴏᴡ ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ғɪʟᴇs</b>",
     "ABOUT": "<b>›› ғᴏʀ ᴍᴏʀᴇ: @TuneBots \n <blockquote expandable>›› ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ: <a href='https://t.me/Snap_Lover8'>Cʟɪᴄᴋ ʜᴇʀᴇ</a> \n›› Nᴇᴡs Rᴏᴏᴍ: <a href='https://t.me/+NbpXnldC3AI2NTU1'>Cʟɪᴄᴋ ʜᴇʀᴇ</a> \n›› sɴᴀᴘ ʟᴏᴠᴇʀ: <a href='https://t.me/+5000jEnshVVmYzg1'>Cʟɪᴄᴋ ʜᴇʀᴇ</a> \n›› Dɪsᴋᴡᴀʟᴀ: <a href='https://t.me/+GHL_Gg64eBZlMTVl'>Cʟɪᴄᴋ ʜᴇʀᴇ</a> \n›› Tᴇʀᴀʙᴏx: <a href='https://t.me/+VoZbnEAO9CxhZWE1'>Cʟɪᴄᴋ ʜᴇʀᴇ</a> \n›› ᴅᴇᴠᴇʟᴏᴘᴇʀ: @SnapLoverXBot</b></blockquote>",
     "REPLY": "<b>For More Join - @Snap_Lover8</b>",
-    "SHORT_MSG": "<b>📊 ʜᴇʏ bro, \n\n⚠️ Yᴏᴜʀ ᴀᴅs ᴛᴏᴋᴇɴ ɪs ᴇxᴘɪʀᴇᴅ ᴏʀ ɪɴᴠᴀʟɪᴅ. Pʟᴇᴀsᴇ ᴠᴇʀɪғʏ ᴛᴏ ᴀᴄᴄᴇss ᴛʜᴇ ғɪʟᴇs. \n\n⏰ Tᴏᴋᴇɴ Tɪᴍᴇᴏᴜᴛ: 20ʜᴏᴜʀs \n\n❓ Wʜᴀᴛ ɪs ᴛʜᴇ ᴛᴏᴋᴇɴ?\n\n Tʜɪs ɪs ᴀɴ ᴀᴅs ᴛᴏᴋᴇɴ. Bʏ ᴘᴀssɪɴɢ 𝟷 ᴀᴅ, ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ᴛʜᴇ ʙᴏᴛ ғᴏʀ 20ʜᴏᴜʀs..</b>",
+    "SHORT_MSG": "<b>📊 ʜᴇʏ bro, \n\n⚠️ Yᴏᴜʀ ᴀᴅs ᴛᴏᴋᴇɴ ɪs ᴇxᴘɪʀᴇᴅ ᴏʀ ɪɴᴠᴀʟɪᴅ. Pʟᴇᴀsᴇ ᴠᴇʀɪғʏ ᴛᴏ ᴀᴄᴄᴇss ᴛʜᴇ ғɪʟᴇs. \n\n⏰ Tᴏᴋᴇɴ Tɪᴍᴇᴏᴜᴛ: 12ʜᴏᴜʀs \n\n❓ Wʜᴀᴛ ɪs ᴛʜᴇ ᴛᴏᴋᴇɴ?\n\n Tʜɪs ɪs ᴀɴ ᴀᴅs ᴛᴏᴋᴇɴ. Bʏ ᴘᴀssɪɴɢ 𝟷 ᴀᴅ, ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ᴛʜᴇ ʙᴏᴛ ғᴏʀ 12ʜᴏᴜʀs..</b>",
     "START_PHOTO": "https://i.ibb.co/YBtKqn2H/photo-2026-03-05-12-16-54-7613744424618557456.jpg",
     "FSUB_PHOTO": "https://i.ibb.co/mVgCc1Ck/photo-2026-03-05-12-16-43-7613744373078949904.jpg",
     "SHORT_PIC": "https://i.ibb.co/VWLXFYjG/photo-2026-03-05-12-12-09-7613743200552878096.jpg",
