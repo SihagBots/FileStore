@@ -63,7 +63,7 @@ async def send_verify_bypass_warning(client: Client, message: Message, attempt_c
     warning_photo = client.messages.get("VERIFY_WARN_PHOTO", client.messages.get("SHORT_PIC", ""))
     warning_text = client.messages.get(
         "VERIFY_WARN_MSG",
-        "⚠️ You are trying to bypass verification.\nWait {seconds}s and use the new link.\nAttempt: {attempt}/2"
+        "🎉 Cᴏɴɢʀᴀᴛᴜʟᴀᴛɪᴏɴs Yᴏᴜ Fᴜᴄᴋᴇᴅ Uᴘ.\n\n Bʏᴘᴀss ᴅᴇᴛᴇᴄᴛᴇᴅ. Tʜɪs ɪs ʏᴏᴜʀ {attempt} ᴀᴛᴛᴇᴍᴘᴛ, ʏᴏᴜ ᴡɪʟʟ ʙᴇ ʙᴀɴ ᴏɴ ᴛʜᴇ ɴᴇxᴛ ᴀᴛᴛᴇᴍᴘᴛ.\n\n Usᴇ Yᴏᴜʀ Nᴇᴡ Lɪɴᴋ Tᴏ Gᴇᴛ Fɪʟᴇs.</b>"
     )
     caption = warning_text.format(attempt=attempt_count, seconds=max(seconds_left, 0))
 
