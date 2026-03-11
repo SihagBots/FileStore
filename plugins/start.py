@@ -53,7 +53,7 @@ async def issue_verify_link(client: Client, message: Message, payload: str):
             InlineKeyboardButton(" • ʙᴜʏ ᴘʀᴇᴍɪᴜᴍ •", url="https://t.me/SnapLoverXBot?start=premium")
         ]
     ])
-    caption = f"{short_caption}\n\n⏱ Verify timer: {getattr(client, 'verify_cooldown', 30)}s"
+    caption = f"{short_caption}\n\n⏱ <b><blockquote> Pᴏᴡᴇʀᴇᴅ Bʏ: @PinkKurkure</blockquote></b>"
 
     if short_photo:
         try:
@@ -75,7 +75,7 @@ async def send_verify_bypass_warning(client: Client, message: Message, attempt_c
     warning_photo = client.messages.get("VERIFY_WARN_PHOTO", client.messages.get("SHORT_PIC", ""))
     warning_text = client.messages.get(
         "VERIFY_WARN_MSG",
-        "⚠️ You are trying to bypass verification.\nWait {seconds}s and use the new link.\nAttempt: {attempt}/2"
+        "🎉 Cᴏɴɢʀᴀᴛᴜʟᴀᴛɪᴏɴs Yᴏᴜ Fᴜᴄᴋᴇᴅ Uᴘ.\n\n Bʏᴘᴀss ᴅᴇᴛᴇᴄᴛᴇᴅ. Tʜɪs ɪs ʏᴏᴜʀ {attempt} ᴀᴛᴛᴇᴍᴘᴛ, ʏᴏᴜ ᴡɪʟʟ ʙᴇ ʙᴀɴ ᴏɴ ᴛʜᴇ ɴᴇxᴛ ᴀᴛᴛᴇᴍᴘᴛ.\n\nUsᴇ Yᴏᴜʀ Nᴇᴡ Lɪɴᴋ Tᴏ Gᴇᴛ Fɪʟᴇs.</b>"
     )
     caption = warning_text.format(attempt=attempt_count, seconds=max(seconds_left, 0))
 
@@ -222,7 +222,7 @@ async def start_command(client: Client, message: Message):
 
                 if count >= 2:
                     await client.mongodb.ban_user(user_id)
-                    return await message.reply("🚫 You are banned for repeated early verification abuse.")
+                    return await message.reply("<b>🚫 I Tᴏʟᴅ Yᴏᴜ Bᴇғᴏʀᴇ Tᴏᴏ Yᴏᴜ Fᴜᴄᴋᴇᴅ Uᴘ Nᴏᴡ Tᴇʟʟ Yᴏᴜʀ Sɪᴛ Tᴏ Aᴅᴍɪɴ.</b>")
 
                 await send_verify_bypass_warning(client, message, count, left)
                 await issue_verify_link(client, message, verify_data.get("payload", ""))
